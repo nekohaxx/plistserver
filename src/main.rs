@@ -47,7 +47,7 @@ async fn generate_plist(query: web::Query<PlistQuery>) -> impl Responder {
         .replace("{name}", &query.name);
 
     HttpResponse::Ok()
-        .content_type("application/xml")
+        .content_type("application/octet-stream")
         .body(plist_xml)
 }
 
