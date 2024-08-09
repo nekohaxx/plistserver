@@ -47,7 +47,8 @@ async fn generate_plist(query: web::Query<PlistQuery>) -> impl Responder {
         .replace("{name}", &query.name);
 
     HttpResponse::Ok()
-        .content_type("text/xml")
+        .content_type("application/octet-stream")
+        .header("Content-Disposition", "attachment; filename=\"manifest.plist\"")
         .body(plist_xml)
 }
 
