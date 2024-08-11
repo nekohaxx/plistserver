@@ -6,6 +6,7 @@ struct PlistQuery {
     bundleid: String,
     name: String,
     version: String,
+    fetchurl: String,
 }
 
 static PLIST_TEMPLATE: &str = r#"<?xml version="1.0" encoding="UTF-8"?>
@@ -21,7 +22,7 @@ static PLIST_TEMPLATE: &str = r#"<?xml version="1.0" encoding="UTF-8"?>
                     <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>https://localhost.direct:9090/tempsigned.ipa</string>
+                    <string>{fetchurl}/tempsigned.ipa</string>
                 </dict>
             </array>
             <key>metadata</key>
@@ -44,7 +45,8 @@ async fn generate_plist(query: web::Query<PlistQuery>) -> impl Responder {
     let plist_xml = PLIST_TEMPLATE
         .replace("{bundleid}", &query.bundleid)
         .replace("{version}", &query.version)
-        .replace("{name}", &query.name);
+        .replace("{name}", &query.name)
+        .replace("{fetchurl}", &query.fetchurl);
 
     HttpResponse::Ok()
         .content_type("application/octet-stream")
