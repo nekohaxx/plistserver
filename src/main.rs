@@ -22,7 +22,7 @@ static PLIST_TEMPLATE: &str = r#"<?xml version="1.0" encoding="UTF-8"?>
                     <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>{fetchurl}/tempsigned.ipa</string>
+                    <string>{fetchurl}</string>
                 </dict>
             </array>
             <key>metadata</key>
