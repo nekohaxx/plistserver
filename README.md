@@ -11,3 +11,5 @@ This is licensed under the GPLv3 so you are free to use this anywhere (as long a
 ## Credits
 plistServer was originally written by the QuickSign team.
 [Source](https://github.com/QuickSign-Team/plistserver)
+[c22dev](https://github.com/c22dev)
+[boredcoder411](https://github.com/boredcoder411)
