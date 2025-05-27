@@ -65,3 +65,5 @@ itms-services://?action=download-manifest&url=https://YOURIP:4443/plist.plist
 ```
 **This should go without saying, but make sure your iPhone and computer are on the same network.**
 After entering that URL into your browser, you’ll receive a request to open this page in iTunes, and once accepted, a request to install the app from your computer’s IP. This may take a minute depending on your network speed, but if you go to your Home Screen, you should now see your app installed!
+
+Written by [Jacob](https://github.com/jacobprezant).
