@@ -1,4 +1,4 @@
-### A full guide to installing .ipa files on iOS with an Apple Developer Program Membership, with any operating system, utilizing solely Apple and OSS tools; with plistserver.
+### A full guide to installing .ipa files on iOS with an Apple Developer Program Membership, with any operating system, utilizing solely Apple and OSS tools; with plistServer.
 
 Make an Apple ID and enroll into the Apple Developer program. Get started at [developer.apple.com](https://developer.apple.com).
 
@@ -48,14 +48,14 @@ When you open them on iOS, you’ll get a prompt saying “Profile Downloaded”
 
 14. The following assumes you have python installed on your system. It is likely stock. We now want to run a python script for the HTTPS server. You can find a sample script attached to this repository [(https.py)](https.py); download it and replace YOURIP with your own computer’s ip address. Make sure all these files (yourip.pem, yourip-key.pem, signed.ipa, plist.plist once we generate it) are in the same directory as the one from which your are running your HTTPS python script. Run the script.
 
-15. We also need to generate our plist, an easy way to do this is with the Open Source [plistserver](https://github.com/nekohaxx/plistserver), and referencing their documentation having also installed Rust, run `cargo run`. This will open a web server running locally at port 3788. We need to run a curl to our plistserver to generate our plist. But first, we need to do a few things. <br><br>
+15. We also need to generate our plist, an easy way to do this is with the Open Source [plistServer](https://github.com/nekohaxx/plistserver), and referencing their documentation having also installed Rust, run `cargo run`. This will open a web server running locally at port 3788. We need to run a curl to our plistServer to generate our plist. But first, we need to do a few things. <br><br>
 `curl "http://127.0.0.1:3788/genPlist?bundleid=YOURBUNDLEID&name=YourApp&version=1.0&fetchurl=https://YOURIP:4443/signed.ipa”`
 
 Taking the above code, replace YOURIP for your own IP, YourApp for the name of the app you’re installing, and we need to replace YOURBUNDLEID with the bundle id of the ipa. Don’t replace 127.00.0.1 with your ip. **This must be exact, or else you will run into issues. It is NOT the bundle id we set earlier in the Apple Developer portal.** We’ll run a python script in this repository [(unzip.py)](unzip.py) to get the bundle id of our signed ipa. If your signed.ipa is in the same directory from which you run this script, you shouldn’t need to change anything. After running, your output will be something like `Bundle ID: thewonderofyou.Feather`. 
 <br>
 It doesn’t matter if this isn’t a proper reverse domain string. Note this for the next step. 
 <br>
-Keep in mind that this assumes your signed.ipa is in the same directory as your plistserver, and that its name is exactly “signed.ipa”. Now, we change YOURBUNDLEID to the bundle ID we just got with our python script. A sample curl is shown `curl "http://192.0.0.1:3788/genPlist?bundleid=thewonderofyou.Feather&name=Feather&version=1.0&fetchurl=https://YOURIP:4443/signed.ipa"`. Run this and expect an output like the sample in this repository [(sampleoutput.txt)](sampleoutput.txt). Copy and paste the output beginning with “<“ and ending with “>” into a text editor of your choice, and save the file as plist.plist into the same directory as everything else.
+Keep in mind that this assumes your signed.ipa is in the same directory as your plistServer, and that its name is exactly “signed.ipa”. Now, we change YOURBUNDLEID to the bundle ID we just got with our python script. A sample curl is shown `curl "http://192.0.0.1:3788/genPlist?bundleid=thewonderofyou.Feather&name=Feather&version=1.0&fetchurl=https://YOURIP:4443/signed.ipa"`. Run this and expect an output like the sample in this repository [(sampleoutput.txt)](sampleoutput.txt). Copy and paste the output beginning with “<“ and ending with “>” into a text editor of your choice, and save the file as plist.plist into the same directory as everything else.
 <br><br>
 **This is essentially the end. Next and last step is installation. Best practice is to restart your iPhone now before you continue. Highly recommended.**<br><br>
 
