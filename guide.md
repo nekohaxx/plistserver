@@ -59,9 +59,9 @@ Keep in mind that this assumes your signed.ipa is in the same directory as your 
 <br><br>
 **This is essentially the end. Next and last step is installation. Best practice is to restart your iPhone now before you continue. Highly recommended.**<br><br>
 
-16. Run this url in safari on your iOS device. Change YOURIP to your actual ip address.
+16. Run this url in safari on your iOS device. Change YOURIP to your actual IP address.
 ```
 itms-services://?action=download-manifest&url=https://YOURIP:4443/plist.plist
 ```
 **This should go without saying, but make sure your iPhone and computer are on the same network.**
-After entering that url into your browser, you’ll receive a request to open this page in iTunes, and once accepted a request to install the app from your computer’s ip. This may take a minute depending on your network speed, but if you go to your Home Screen you should now see your app installed!
+After entering that URL into your browser, you’ll receive a request to open this page in iTunes, and once accepted, a request to install the app from your computer’s IP. This may take a minute depending on your network speed, but if you go to your Home Screen, you should now see your app installed!
