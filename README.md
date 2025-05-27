@@ -8,6 +8,9 @@ This is licensed under the GPLv3 so you are free to use this anywhere (as long a
 
 2. Go into the server's cloned directory, and simply run `cargo run`
 
+## Guide
+Take a look at the [guide](Guide.md) for local .ipa signing & installation using plistServer and other open source tools.
+
 ## Credits
 plistServer was originally written by the QuickSign team.
 [Source](https://github.com/QuickSign-Team/plistserver)
