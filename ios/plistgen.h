@@ -1,0 +1,1 @@
+const char *generate_plist(const char *bundleid, const char *name, const char *version, const char *fetchurl);
