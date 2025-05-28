@@ -7,3 +7,10 @@ The library is [lib.rs](lib.rs) compiled into [libplistgen.a](libplistgen.a) as 
 SwiftUI simply calls it.
 
 Built by [Jacob](https://github.com/jacobprezant).
+
+
+<p>
+  <img src="https://github.com/user-attachments/assets/0b5f6553-99f3-42ea-bc2b-dd97e9339577" alt="IMG_4724" width="30%">
+  <img src="https://github.com/user-attachments/assets/e67c0030-5916-477b-8464-f5d27ac16cc4" alt="IMG_4722" width="30%" style="margin-right: 1%">
+  <img src="https://github.com/user-attachments/assets/64f0c82c-bf76-4bb8-bcb5-a5825e05a797" alt="IMG_4723" width="30%" style="margin-right: 1%">
+</p>
