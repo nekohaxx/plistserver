@@ -5,3 +5,5 @@ Also see a sample .ipa [here](Payload.ipa) that takes plistServer, bridges the R
 
 The library is [lib.rs](lib.rs) compiled into [libplistgen.a](libplistgen.a) as compiled machine code, a C compatible header declaration at [plistgen.h](plistgen.h), and the bringing header at [BringingHeader.h](bringingheader.h).
 SwiftUI simply calls it.
+
+Built by [Jacob](https://github.com/jacobprezant).
