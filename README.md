@@ -12,7 +12,7 @@ This is licensed under the GPLv3 so you are free to use this anywhere (as long a
 Take a look at the [guide](Guide.md) for local .ipa signing & installation using plistServer and other open source tools.
 
 ## iOS
-If you're doing plist related dev work on iOS, see [here](ios.md) for more inforomation, including a Swift-Rust bridge and POC .xcodeproj, along with an .ipa in [Releases](https://github.com/nekohaxx/plistserver/releases) for a local on-device app.
+If you're doing plist related dev work on iOS, see [here](ios.md) for more inforomation-- including a Swift-Rust bridge and POC .xcodeproj, along with a compiled .ipa [here](Payload.ipa) for a local on-device app.
 
 ## Credits
 plistServer was originally written by the QuickSign team.
